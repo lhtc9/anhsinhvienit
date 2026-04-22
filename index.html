@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nền tảng tổng hợp sản phẩm hữu ích, giá hợp lý dành cho sinh viên – giúp mua sắm nhanh, tiện và thông minh hơn</title>
-  
-<link rel="icon" href="https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg">
+<title>Shop Knox Media</title>
+<link rel="icon" href="https://i.pinimg.com/736x/ea/1e/a1/ea1ea138da0be93b05a360e3d0dc7bde.jpg">
 <style>
 * {
   margin: 0;
@@ -264,7 +263,7 @@ header {
 /* HEADER SHOP STYLE */
 .shop-header {
   height: 180px;
-  background: url('https://i.pinimg.com/1200x/e0/91/aa/e091aa4b1154b5d46452a95f0f326e61.jpg') center/cover no-repeat;
+  background: url('https://i.pinimg.com/736x/85/53/1b/85531bc1547a1cd5cf75414371dc8e90.jpg') center/cover no-repeat;
   position: relative;
   color: white;
 }
@@ -324,7 +323,8 @@ header {
   <div class="overlay">
 
     <div class="shop-info">
-      <img src="https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg" class="avatar">
+      <a href="https://collshp.com/chaulht7506?linkId=32431782&view=storefront" target="_blank">
+      <img src="https://i.pinimg.com/736x/f5/c9/d8/f5c9d869a07f1b24a00c9c2316d4d55d.jpg" class="avatar"></a>
       <h2>Anh Sinh Viên IT</h2>
     </div>
 
@@ -339,11 +339,13 @@ header {
 <div class="category">
   <div class="cat-item" onclick="filter('all')">Tất cả</div>
   <div class="cat-item" onclick="filter('ao')">Áo</div>
-  <div class="cat-item" onclick="filter('quan')">Quần</div>
+  <div class="cat-item" onclick="filter('q')">Quần</div>
   <div class="cat-item" onclick="filter('gd')">Giày dép</div>
-  <div class="cat-item" onclick="filter('pk')">Phụ kiện</div>
+  <div class="cat-item" onclick="filter('ht')">Hair styling</div>
   <div class="cat-item" onclick="filter('gaming')">Gaming</div>
   <div class="cat-item" onclick="filter('decor')">Decor</div>
+  <div class="cat-item" onclick="filter('sac')">Sách</div>
+  <div class="cat-item" onclick="filter('tb')">Thiết bị</div>
 </div>
 
 <div class="container" id="productList"></div>
@@ -353,118 +355,104 @@ header {
 <script>
 const products = [
   {
-    name: "Tai nghe gaming RGB siêu chất",
-    price: "199.000đ",
-    oldPrice: "299.000đ",
-    img: "https://www.pinterest.com/pin/42362052737318107/feedback/?invite_code=a93331697a9d42e784d06750d53e0715&sender_id=950259727533917606",
-    linkTikTok: "LINK_TIKTOK",
-    category: "gaming",
+    name: "Quần Vải Ống Rộng Kaki Dù Phong Cách Hàn Quốc, Mềm Mát, Thoải Mái",
+    price: "115.000đ",
+    oldPrice: "160.000đ",
+    img: "https://i.pinimg.com/736x/a4/2e/3e/a42e3ea7cd4f50e9e9ec23b2a33b97c1.jpg",
+    linkTikTok: "https://s.shopee.vn/1gErclkmgO",
+    category: "q",
     hot: true
   },
   {
-    name: "Áo vest nam chụp kỉ yếu học sinh, đen thanh lịch",
-    price: "89.000đ",
-    img: "https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg",
-    linkTikTok: "https://vn.shp.ee/pGtbKdG4",
+    name: "Áo Sơ Mi Dài Tay Nam Nữ Thấm Hút Tốt Mềm Form Oversize Unisex Trẻ Trung",
+    price: "100.000đ",
+    oldPrice: "",
+    img: "https://i.pinimg.com/736x/fe/a2/2a/fea22ad46624598a9411276c5f290234.jpg",
+    linkTikTok: "https://s.shopee.vn/808vALME9S",
     category: "ao",
     hot: false
   },
   {
-    name: "Tai nghe gaming RGB siêu chất",
-    price: "199.000đ",
-    img: "https://www.pinterest.com/pin/42362052737318107/feedback/?invite_code=a93331697a9d42e784d06750d53e0715&sender_id=950259727533917606",
-    linkTikTok: "LINK_TIKTOK",
-    category: "gaming",
+    name: "Quần Short Kaki Dù dáng Trên Gối Bản Nâng Cấp đường May Menswear Nam",
+    price: "75.000đ",
+    oldPrice: "118.000đ",
+    img: "https://i.pinimg.com/736x/e4/93/3b/e4933b7ce8037f271ea3d291b060e490.jpg",
+    linkTikTok: "https://s.shopee.vn/9ztzXH03kX",
+    category: "q",
     hot: true
   },
   {
-    name: "Đèn LED decor chill sáng rực cả căn phòng",
-    price: "89.000đ",
-    img: "https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg",
-    linkTikTok: "LINK_TIKTOK",
-    category: "pk",
-    hot: false
-  },
-  {
-    name: "Áo vest nam chụp kỉ yếu học sinh, đen thanh lịch",
-    price: "89.000đ",
-    img: "https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg",
-    linkTikTok: "https://vn.shp.ee/pGtbKdG4",
-    category: "quan",
-    hot: false
-  },
-  {
-    name: "Đèn LED decor chill sáng rực cả căn phòng",
-    price: "89.000đ",
-    img: "https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg",
-    linkTikTok: "LINK_TIKTOK",
-    category: "gd",
-    hot: false
-  },
-  {
-    name: "Áo vest nam chụp kỉ yếu học sinh, đen thanh lịch",
-    price: "89.000đ",
-    img: "https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg",
-    linkTikTok: "https://vn.shp.ee/pGtbKdG4",
-    category: "decor",
-    hot: false
-  },
-  {
-    name: "Tai nghe gaming RGB siêu chất",
-    price: "199.000đ",
-    img: "https://www.pinterest.com/pin/42362052737318107/feedback/?invite_code=a93331697a9d42e784d06750d53e0715&sender_id=950259727533917606",
-    linkTikTok: "LINK_TIKTOK",
-    category: "gaming",
-    hot: true
-  },
-  {
-    name: "Áo vest nam chụp kỉ yếu học sinh, đen thanh lịch",
-    price: "89.000đ",
-    img: "https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg",
-    linkTikTok: "https://vn.shp.ee/pGtbKdG4",
+    name: "Áo Thun Local Brand VIBESTU Only Members Form Rộng Unisex 250Gsm Cotton",
+    price: "158.799đ",
+    oldPrice: "",
+    img: "https://i.pinimg.com/736x/ee/5a/fd/ee5afd89124fc47928409e4907e52a80.jpg",
+    linkTikTok: "https://s.shopee.vn/2qQp1HvjQV",
     category: "ao",
     hot: false
   },
   {
-    name: "Tai nghe gaming RGB siêu chất",
-    price: "199.000đ",
-    img: "https://www.pinterest.com/pin/42362052737318107/feedback/?invite_code=a93331697a9d42e784d06750d53e0715&sender_id=950259727533917606",
-    linkTikTok: "LINK_TIKTOK",
-    category: "gaming",
+    name: "Áo Sơ Mi Nam Linen Sọc Xanh Đi Biển Mùa Hè Vải Thoáng Mát Thoải Mái",
+    price: "129.999đ - 143.000đ",
+    oldPrice: "200.000đ",
+    img: "https://i.pinimg.com/736x/0f/7a/db/0f7adb95cf6433f51b0516b7b91fae94.jpg",
+    linkTikTok: "https://s.shopee.vn/LjU1ZYlLr",
+    category: "ao",
+    hot: true
+  },
+ {
+    name: "Áo thun Vasnava The Pain - Cotton Nam Nữ Unisex Tay Lỡ Oversize Cổ Tròn Top Trend",
+    price: "189.000đ",
+    oldPrice: "280.000đ",
+    img: "https://i.pinimg.com/736x/52/b4/d8/52b4d8369b20e3c098ef97a8b3106cc6.jpg",
+    linkTikTok: "https://s.shopee.vn/6AhGzwR6cH",
+    category: "ao",
     hot: true
   },
   {
-    name: "Đèn LED decor chill sáng rực cả căn phòng",
-    price: "89.000đ",
-    img: "https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg",
-    linkTikTok: "LINK_TIKTOK",
-    category: "pk",
-    hot: false
+    name: "Quần lót nam boxer PAZZINI thun lạnh cao cấp, co giãn 4 chiều, thấm hút kháng khuẩn",
+    price: "272.300đ",
+    oldPrice: "387.000đ",
+    img: "https://i.pinimg.com/736x/b3/b9/ae/b3b9aec50ae457de20efe5e4bfb27d68.jpg",
+    linkTikTok: "https://s.shopee.vn/20ri0eMijZ",
+    category: "q",
+    hot: true
   },
   {
-    name: "Áo vest nam chụp kỉ yếu học sinh, đen thanh lịch",
-    price: "89.000đ",
-    img: "https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg",
-    linkTikTok: "https://vn.shp.ee/pGtbKdG4",
-    category: "quan",
-    hot: false
+    name: "Sáp vuốt tóc Roug Đen 90gr , Roug Trắng 90gr cao cấp cho nam",
+    price: "290.000đ",
+    oldPrice: "350.000đ",
+    img: "https://i.pinimg.com/736x/86/01/18/860118f40c70c34c9f7ffd3c12d31fee.jpg",
+    linkTikTok: "https://s.shopee.vn/AUqG8EusjY",
+    category: "ht",
+    hot: true
   },
   {
-    name: "Đèn LED decor chill sáng rực cả căn phòng",
-    price: "89.000đ",
-    img: "https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg",
-    linkTikTok: "LINK_TIKTOK",
-    category: "gd",
-    hot: false
+    name: "Tai Nghe Bluetooth Airpods Chống Tiếng Ồn Có Micro Cho Mọi Dòng Máy",
+    price: "99.000đ",
+    oldPrice: "198.000đ",
+    img: "https://i.pinimg.com/736x/86/4f/0c/864f0cb139cb7105afefdf72c694dfda.jpg",
+    linkTikTok: "https://s.shopee.vn/8ASLOl1GEr",
+    category: "tb",
+    hot: true
   },
   {
-    name: "Áo vest nam chụp kỉ yếu học sinh, đen thanh lịch",
-    price: "89.000đ",
-    img: "https://i.pinimg.com/736x/b2/29/e7/b229e716a363f31927d2408e0856fdd4.jpg",
-    linkTikTok: "https://vn.shp.ee/pGtbKdG4",
-    category: "decor",
-    hot: false
-  }
+    name: "QUẠT CẦM TAY SÒ LẠNH K801 2026 – 100 CẤP ĐỘ GIÓ, LÀM MÁT NHANH, PIN TRÂU, MÀN HÌNH THÔNG MINH ",
+    price: "330.000đ",
+    oldPrice: "",
+    img: "https://i.pinimg.com/736x/05/d3/8e/05d38e38f2733c885a668faf85fd128d.jpg",
+    linkTikTok: "https://s.shopee.vn/2BB8Cy3X7Y ",
+    category: "tb",
+    hot: true
+  },
+  {
+    name: "Sách - Đắc Nhân Tâm (Khổ Lớn - Tái Bản 2023) - SBOOKS",
+    price: "65.000đ",
+    oldPrice: "86.000đ",
+    img: "https://i.pinimg.com/736x/21/07/0e/21070e3981cb383ac90c2e419a3120eb.jpg",
+    linkTikTok: "https://s.shopee.vn/AADPlLffd4",
+    category: "sac",
+    hot: true
+  },
 ];
 
 const container = document.getElementById("productList");
