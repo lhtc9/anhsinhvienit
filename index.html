@@ -300,11 +300,29 @@ header {
   border: none;
   outline: none;
 }
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* đảm bảo nội dung nằm trên hiệu ứng */
+header, .category, .container, #backToTop {
+  position: relative;
+  z-index: 1;
+}
 </style>
 
 </head>
 
 <body>
+
+<div id="particles-js"></div>
 
 <header class="shop-header">
   <div class="overlay">
@@ -535,6 +553,40 @@ btn.onclick = function () {
     behavior: "smooth"
   });
 };
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<script>
+tsParticles.load("particles-js", {
+  background: {
+    color: "transparent"
+  },
+  particles: {
+    number: {
+      value: 35
+    },
+    color: {
+      value: "#ff6a00" // màu cam giống web ông
+    },
+    links: {
+      enable: true,
+      color: "#ff6a00",
+      distance: 140,
+      opacity: 0.5
+    },
+    move: {
+      enable: true,
+      speed: 1
+    },
+    size: {
+      value: 2
+    },
+    opacity: {
+      value: 0.6
+    }
+  }
+});
 </script>
 </body>
 </html>
