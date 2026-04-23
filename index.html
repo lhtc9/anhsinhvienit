@@ -600,13 +600,13 @@ if (!isDev) {
   };
 },
   document.onkeydown = function(e) {
-  // chặn Ctrl + U
+  // Ctrl + U
   if (e.ctrlKey && e.key.toLowerCase() === "u") return false;
 
-  // chặn F12
+  // F12
   if (e.key === "F12") return false;
 
-  // chặn Ctrl + Shift + I
+  // Ctrl + Shift + I
   if (e.ctrlKey && e.shiftKey && e.key === "I") return false;
 }
 </script>
