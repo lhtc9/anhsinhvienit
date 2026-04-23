@@ -597,17 +597,9 @@ if (!isDev) {
 
   document.onkeydown = function(e) {
     if (e.key === "F12") return false;
+    if (e.ctrlKey && e.key.toLowerCase() === "u") return false;
+    if (e.ctrlKey && e.shiftKey && e.key === "I") return false;
   };
-},
-  document.onkeydown = function(e) {
-  // Ctrl + U
-  if (e.ctrlKey && e.key.toLowerCase() === "u") return false;
-
-  // F12
-  if (e.key === "F12") return false;
-
-  // Ctrl + Shift + I
-  if (e.ctrlKey && e.shiftKey && e.key === "I") return false;
 }
 </script>
 </body>
