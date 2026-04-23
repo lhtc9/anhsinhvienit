@@ -472,6 +472,14 @@ const products = [
 
 const container = document.getElementById("productList");
 
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 function render(list) {
   container.innerHTML = "";
   list.forEach(p => {
@@ -507,7 +515,7 @@ function searchProduct(keyword) {
   render(result);
 }
 
-render(products);
+render(shuffleArray([...products]));
 const btn = document.getElementById("backToTop");
 
 // hiện nút khi scroll xuống
