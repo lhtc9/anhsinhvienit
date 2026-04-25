@@ -349,12 +349,13 @@ header, .category, .container{
   <div class="cat-item" onclick="filter('ao')">Áo</div>
   <div class="cat-item" onclick="filter('q')">Quần</div>
   <div class="cat-item" onclick="filter('gd')">Giày dép</div>
+  <div class="cat-item" onclick="filter('gym')">Gym</div>
   <div class="cat-item" onclick="filter('sac')">Sách</div>
   <div class="cat-item" onclick="filter('tb')">Thiết bị</div>
   <div class="cat-item" onclick="filter('mp')">Mỹ phẩm</div>
   <div class="cat-item" onclick="filter('ht')">Hair styling</div>
   <div class="cat-item" onclick="filter('pk')">Phụ kiện</div>
-  <div class="cat-item" onclick="filter('gaming')">Gaming</div>
+  <div class="cat-item" onclick="filter('gm')">Gaming</div>
 </div>
 
 <div class="container" id="productList"></div>
@@ -530,6 +531,118 @@ const products = [
     img: "https://i.pinimg.com/736x/69/66/4d/69664d419de3f00cd700e1befb774914.jpg",
     linkTikTok: "https://vt.tiktok.com/ZS9NkwvCn3R5k-Ta21d/",
     category: "tb",
+    hot: true
+  },
+  {
+    name: "Combo 3 Quần Lót Nam DWIN Sịp Tam Giác Kháng Khuẩn Cao Cấp Boxer Vải Thun Lạnh Co Giãn 4 Chiều SP06A",
+    img: "https://i.pinimg.com/736x/41/9c/c9/419cc90b1d695cf02a03cfa7130e9b0c.jpg",
+    linkTikTok: "https://s.shopee.vn/8fOh87yifJ",
+    category: "q",
+    hot: true
+  },
+  {
+    name: "Quần Lót Nam Tam Giác Họa Tiết ICON Cao Cấp Chất Thun Lạnh Kháng Khuẩn Co Giãn 4 Chiều BX3",
+    img: "https://i.pinimg.com/736x/66/5c/24/665c245d5157c9023c36b92212f0fde2.jpg",
+    linkTikTok: "https://s.shopee.vn/1BIgCT8VGc",
+    category: "q",
+    hot: true
+  },
+  {
+    name: "Quần Ống Rộng Kẻ Sọc ZGO Form Suông Unisex Vải Không Nhăn Mềm Mát QZG03",
+    img: "https://i.pinimg.com/736x/ec/34/20/ec342058d7fdb51f27e4b5128c6a38f8.jpg",
+    linkTikTok: "https://s.shopee.vn/2Vo3mxvtIa",
+    category: "q",
+    hot: false
+  },
+  {
+    name: "Quần Túi Hộp Nam Nữ Vải Dù Có Dây Rút Unisex, Ống Rộng Phong Cách Hiphop Đường Phố Q130",
+    img: "https://i.pinimg.com/736x/db/d5/ab/dbd5ab590a977f0d189c547da968ff87.jpg",
+    linkTikTok: "https://s.shopee.vn/3qJRNRhl2J",
+    category: "q",
+    hot: false
+  },
+  {
+    name: "Dép Quai Ngang Nam Nữ Unisex Thời Trang Trẻ Trung Cá Tính Quai Dán Hai Màu Đen Trắng",
+    img: "https://i.pinimg.com/736x/aa/2f/e5/aa2fe5fc7cddbafc4e794ac7d01362ba.jpg",
+    linkTikTok: "https://s.shopee.vn/70GT9JRKPg",
+    category: "gd",
+    hot: false
+  },
+  {
+    name: "Giày Da Nam Chunky Derby Cột Dây Thời Trang INICHI G1112 Đế Chunky Cá Tính",
+    img: "https://i.pinimg.com/736x/68/49/42/68494233c323c22e21467b1282424108.jpg",
+    linkTikTok: "https://s.shopee.vn/40crZpAJ00",
+    category: "gd",
+    hot: true
+  },
+  {
+    name: "Giày Thể Thao Nam Sneaker Trắng ZAVAS Bằng Da Form Gọn Gàng Đi Êm Chân",
+    img: "https://i.pinimg.com/736x/fd/9e/6b/fd9e6bca735664978c7a4d1b1b2e334b.jpg",
+    linkTikTok: "https://s.shopee.vn/8V5Gw8Dsqz",
+    category: "gd",
+    hot: false
+  },
+  {
+    name: "Sách - Tuổi Trẻ Đáng Giá Bao Nhiêu (Tái Bản 2021) - Nhã Nam",
+    img: "https://i.pinimg.com/1200x/fd/c7/7e/fdc77e6ce3ca60561813d821234338c6.jpg",
+    linkTikTok: "https://s.shopee.vn/1qYMzvGBrK",
+    category: "sac",
+    hot: true
+  },
+  {
+    name: "Sách - Giác Ngộ: Lời Phật Dạy Về Con Đường Giải Thoát",
+    img: "https://i.pinimg.com/736x/99/29/ae/9929ae94cefd8b1ed0276b660086959e.jpg",
+    linkTikTok: "https://s.shopee.vn/70GT9Qoy4U",
+    category: "sac",
+    hot: false
+  },
+  {
+    name: "Quạt Tản Nhiệt Điện Thoại MEMO FLA2 Chống Ồn Có Đèn LED Gaming Tăng FPS Giảm Lag",
+    img: "https://i.pinimg.com/736x/1d/42/f7/1d42f76b70c2196e267315a3c46bc9c1.jpg",
+    linkTikTok: "https://s.shopee.vn/7ppa8zbm8f",
+    category: "gm",
+    hot: false
+  },
+  {
+    name: "Combo Viên Uống DHC Vitamin C & Kẽm Hỗ Trợ Giảm Thâm Sáng Da (20 Ngày)",
+    img: "https://i.pinimg.com/736x/be/fc/45/befc453e75ab9e305ebe0bd3d81234a7.jpg",
+    linkTikTok: "https://s.shopee.vn/6L0mMGAMqY",
+    category: "gym",
+    hot: true
+  },
+  {
+    name: "Viên Uống Bổ Sung Kẽm DHC Zinc 30 Viên (30 Ngày) Hàng Nhật",
+    img: "https://i.pinimg.com/1200x/64/5b/59/645b5989451ca9faff52a263aeebc73d.jpg",
+    linkTikTok: "https://s.shopee.vn/2g7TzbiRV7",
+    category: "gym",
+    hot: true
+  },
+  {
+    name: "Bình Đựng Nước Tập Gym MyProtein 600ML Có Lò Xo Lắc Shaker Tiện Lợi",
+    img: "https://i.pinimg.com/736x/df/33/08/df3308f44002f0fc87266055bd5d2f5e.jpg",
+    linkTikTok: "https://s.shopee.vn/3qJRNmUBh6",
+    category: "gym",
+    hot: false
+  },
+  {
+    name: "Dây Nhảy Thể Dục Lõi Thép Có Tạ Sắt 2.7m Tay Cầm Mút Êm Ái",
+    img: "https://i.pinimg.com/736x/3d/a0/1f/3da01fccef6ed7c9a84b110c200c4957.jpg",
+    linkTikTok: "https://s.shopee.vn/5VRfMsFogi",
+    category: "gym",
+    hot: true
+  },
+  {
+    name: "Đai Lưng Tập Gym 2 Lớp Aolikes A-7983 Hỗ Trợ Bảo Vệ Lưng",
+    img: "https://i.pinimg.com/736x/9a/fb/4a/9afb4abd4b86456e5a9d0cd3fafc1096.jpg",
+    linkTikTok: "https://s.shopee.vn/5fl5ZFZZ59",
+    category: "gym",
+    hot: false
+  },
+  {
+    name: "Dây Kháng Lực Powerband Topbody Kicosport Đa Năng Tập Tại Nhà DKHAL01",
+    img: "https://i.pinimg.com/736x/50/4e/bd/504ebd9d2bd11cb7ca5d32306c5356dc.jpg",
+    linkTikTok: "https://s.shopee.vn/40craDDGAv",
+    category: "gym",
     hot: true
   }
 ];
